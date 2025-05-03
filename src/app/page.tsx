@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import { Header } from '@/components/Header';
+import Header from '@/app/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 export default function Home() {
   return (
-    <div className='relative h-[140vh] h-full overflow-hidden bg-gradient-to-b'>
-      {/* <Header /> */}
+    <div className='relative h-full overflow-hidden bg-gradient-to-b'>
+      <Header />
 
       <main className='relative pb-24 pl-4 lg:pl-16'>
         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
