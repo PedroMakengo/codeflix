@@ -4,9 +4,10 @@ import { Inter } from 'next/font/google';
 import Header from '@/app/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
+
 export default function Home() {
   return (
-    <div className='relative h-full overflow-hidden bg-gradient-to-b'>
+    <div className='relative h-[140vh] overflow-hidden bg-gradient-to-b'>
       <Header />
 
       <main className='relative pb-24 pl-4 lg:pl-16'>
