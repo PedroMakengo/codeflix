@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import Header from '@/app/components/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import { PlayIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
@@ -33,11 +32,32 @@ export default function Home() {
 
         <div className='flex space-x-3'>
           <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>
+            <PlayIcon className='h-6' />
             Play
           </button>
           <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>
+            <InformationCircleIcon className='h-6' />
             More Info
           </button>
+        </div>
+
+        <div className='flex-col space-y-4 '>
+          <div className='flex space-x-4 overflow-x-auto'>
+            {[1, 2, 3, 4, 5].map((i: number) => (
+              <div
+                key={i}
+                className='group relative h-28 min-w-[200px] 
+              transform transition duration-200 ease-in hover:z-50 hover:scale-110 '
+              >
+                <Image
+                  src={`/movie/item_${i}.png`}
+                  fill={true}
+                  alt='MAID'
+                  className='rounded'
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
