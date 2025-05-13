@@ -41,13 +41,20 @@ export default function Home() {
           </button>
         </div>
 
-        <div className='flex-col space-y-4 '>
-          <div className='flex space-x-4 overflow-x-auto'>
-            {[1, 2, 3, 4, 5].map((i: number) => (
+        <div className='flex-col space-y-4'>
+          <div className='flex'>
+            <h2 className='-ml-2 inline-flex items-center text-2xl font-bold'>
+              Featured
+            </h2>
+          </div>
+          <div className='-ml-8 flex space-x-4 overflow-x-auto p-6 scrollbar-hide'>
+            {[1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 2].map((i: number) => (
               <div
                 key={i}
                 className='group relative h-28 min-w-[200px] 
-              transform transition duration-200 ease-in hover:z-50 hover:scale-110 '
+                transform bg-gradient-to-t from-transparent to-black transition duration-200 ease-in hover:z-50 hover:scale-110 
+                md:h-36 md:min-w-[260px] 
+                '
               >
                 <Image
                   src={`/movie/item_${i}.png`}
