@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import MovieCard from '../MovieCard';
 
 type MovieRowProps = {
@@ -14,8 +13,8 @@ export function MoviewRow({ sectionTitle }: MovieRowProps) {
         </h2>
       </div>
       <div className='-ml-6 flex space-x-4 overflow-x-auto p-6 scrollbar-hide'>
-        {[1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 2].map((i: number) => (
-          <MovieCard key={i} index={i} />
+        {[1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 2].map((index: number) => (
+          <MovieCard key={index} index={index} />
         ))}
       </div>
     </div>
